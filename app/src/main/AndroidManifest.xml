@@ -26,6 +26,8 @@
         </activity>
         <activity android:name=".SelectPriority2" >
         </activity>
+        <activity android:name=".select_priority_1" >
+        </activity>
     </application>
 
 </manifest>
