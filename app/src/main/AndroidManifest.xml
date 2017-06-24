@@ -24,6 +24,8 @@
         </activity>
         <activity android:name=".SignUp" >
         </activity>
+        <activity android:name=".SelectPriority2" >
+        </activity>
     </application>
 
 </manifest>
