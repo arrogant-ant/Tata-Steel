@@ -67,7 +67,7 @@
         android:id="@+id/contact_no"
         android:text="10 digit mobile number"
         android:layout_below="@+id/first_name"
-        android:layout_toEndOf="@+id/email" />
+        android:layout_toEndOf="@+id/first_name" />
 
     <TextView
         android:layout_width="wrap_content"
