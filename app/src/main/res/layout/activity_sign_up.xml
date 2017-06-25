@@ -97,9 +97,9 @@
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:id="@+id/next"
+        android:layout_marginTop="44dp"
         android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp" />
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:layout_width="wrap_content"
