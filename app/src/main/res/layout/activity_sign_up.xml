@@ -83,6 +83,7 @@
         android:layout_height="wrap_content"
         android:text="EMAIL ID :"
         android:id="@+id/email"
+        android:gravity="left"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/contact_no"
         android:layout_alignEnd="@+id/contact" />
