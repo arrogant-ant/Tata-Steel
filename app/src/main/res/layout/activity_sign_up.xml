@@ -59,8 +59,8 @@
         android:layout_height="wrap_content"
         android:text="CONTACT N0. :"
         android:id="@+id/contact"
-        android:layout_above="@+id/email"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/contact_no"
+        android:layout_alignStart="@+id/email" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -90,16 +90,16 @@
         android:gravity="left"
         android:layout_marginTop="33dp"
         android:layout_below="@+id/contact_no"
-        android:layout_alignEnd="@+id/contact" />
+        android:layout_alignStart="@+id/personal_no" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:id="@+id/next"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/personal_no"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/editText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -116,7 +116,24 @@
         android:inputType="number"
         android:ems="10"
         android:id="@+id/personal"
-        android:layout_above="@+id/next"
-        android:layout_toEndOf="@+id/first_name" />
+        android:layout_alignBottom="@+id/personal_no"
+        android:layout_toEndOf="@+id/personal_no" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ADDRESS:"
+        android:id="@+id/address"
+        android:layout_alignBottom="@+id/editText"
+        android:layout_alignStart="@+id/personal_no" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPostalAddress"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/personal_no" />
 
 </RelativeLayout>
