@@ -30,6 +30,8 @@
         </activity>
         <activity android:name=".Final" >
         </activity>
+        <activity android:name=".signup3" >
+        </activity>
     </application>
 
 </manifest>
