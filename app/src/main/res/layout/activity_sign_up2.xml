@@ -85,6 +85,6 @@
         android:id="@+id/button2"
         android:layout_below="@+id/confirmpassword"
         android:layout_toEndOf="@+id/textView"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="40dp" />
 
 </RelativeLayout>
