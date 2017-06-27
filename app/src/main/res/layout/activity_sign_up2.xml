@@ -13,7 +13,6 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Security Question"
         android:id="@+id/textView"
-        android:layout_below="@+id/editText4"
         android:layout_alignParentStart="true" />
 
     <EditText
@@ -42,13 +41,7 @@
         android:text="New Password"
         android:id="@+id/textView3"
         android:layout_alignBaseline="@+id/editText3"
-        android:layout_alignBottom="@+id/editText3"
-        android:layout_toEndOf="@+id/editText4" />
-
-    <EditText
-        android:layout_width=""
-        android:layout_height=""
-        android:id="@+id/editText4" />
+        android:layout_alignBottom="@+id/editText3" />
 
     <EditText
         android:layout_width="wrap_content"
