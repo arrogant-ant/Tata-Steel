@@ -20,7 +20,8 @@
         android:text="Security Question"
         android:textStyle="bold"
         android:id="@+id/textView"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignEnd="@+id/answerEdt" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -33,7 +34,8 @@
         android:textStyle="bold"
         android:layout_below="@+id/textView"
         android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp" />
+        android:layout_marginTop="42dp"
+        android:layout_alignEnd="@+id/editText3" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -58,9 +60,10 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/editText3"
+        android:layout_marginTop="38dp"
         android:layout_below="@+id/answerEdt"
-        android:layout_alignEnd="@+id/editText"
-        android:layout_marginTop="69dp" />
+        android:layout_alignEnd="@+id/confirmpassword"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -77,17 +80,17 @@
         android:id="@+id/confirmpassword"
         android:hint="Confirm Password"
         android:textStyle="bold"
-        android:layout_marginTop="42dp"
-        android:layout_below="@+id/textView6"
-        android:layout_toEndOf="@+id/textView6"/>
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
-        android:id="@+id/button2"
-        android:layout_below="@+id/confirmpassword"
-        android:layout_toEndOf="@+id/textView"
-        android:layout_marginTop="40dp" />
+        android:id="@+id/next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp" />
 
 </RelativeLayout>
