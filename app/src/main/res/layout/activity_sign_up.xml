@@ -125,6 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADDRESS:"
+        android:textStyle="bold"
         android:id="@+id/address"
         android:layout_alignBottom="@+id/editText"
         android:layout_alignStart="@+id/personal_no" />
@@ -135,7 +136,7 @@
         android:inputType="textPostalAddress"
         android:ems="10"
         android:id="@+id/editText"
-        android:layout_centerVertical="true"
+        android:layout_below="@+id/personal_no"
         android:layout_toEndOf="@+id/personal_no" />
 
 </RelativeLayout>
