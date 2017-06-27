@@ -8,7 +8,7 @@
     tools:context="com.example.sabita_sant.niwaas.SelectPriority2"
     android:weightSum="1"
     android:orientation="vertical"
-    android:background="@drawable/bk"
+    android:background="@drawable/nb"
     >
 
     <ScrollView
