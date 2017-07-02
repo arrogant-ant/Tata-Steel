@@ -1,96 +1,107 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.example.sabita_sant.niwaas.SignUp2"
     android:orientation="vertical"
-    android:background="@drawable/nb"
-
-
-
+    tools:context="com.example.sabita_sant.niwaas.SignUp2"
     >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Security Question"
-        android:textStyle="bold"
-        android:id="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_alignEnd="@+id/answerEdt" />
+        android:text="PASSWORD"
+        android:layout_marginTop="10dp"
+         />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/answerEdt"
-        android:selectAllOnFocus="false"
-        android:hint="Your Answer"
-        android:textStyle="bold"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="42dp"
-        android:layout_alignEnd="@+id/editText3" />
-
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/editText"
-        android:layout_alignBottom="@+id/answerEdt"
-        android:layout_alignEnd="@+id/answerEdt" />
+        android:id="@+id/password"
+       />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="New Password"
-        android:textStyle="bold"
-        android:id="@+id/textView3"
-        android:layout_alignBaseline="@+id/editText3"
-        android:layout_alignBottom="@+id/editText3" />
+        android:text="CONFIRM PASSWORD"
+       />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
+        android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText3"
-        android:layout_marginTop="38dp"
-        android:layout_below="@+id/answerEdt"
-        android:layout_alignEnd="@+id/confirmpassword"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/confirm_pass"
+         />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:id="@+id/textView6"
-        android:layout_below="@+id/editText3" />
+        android:text="SELECT SECURITY QUESTION"
+        android:id="@+id/securiTY"
+        android:layout_marginTop="20dp"
+        />
 
-    <EditText
+    <RadioGroup
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textMultiLine"
-        android:ems="10"
-        android:id="@+id/confirmpassword"
-        android:hint="Confirm Password"
+        android:id="@+id/security">
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your pet name?"
+        android:id="@+id/q1"
         android:textStyle="bold"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true" />
+        android:checked="false"
+       />
 
+    <RadioButton
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="What is your favourite color?"
+        android:textStyle="bold"
+        android:id="@+id/q2"
+        android:checked="false"
+        />
+
+    <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your father&apos;s middle name?"
+        android:textStyle="bold"
+        android:id="@+id/q3"
+        android:checked="false"
+       />
+
+        <RadioButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="What is your school&apos;s  name?"
+        android:textStyle="bold"
+        android:id="@+id/q4"
+        android:checked="false"
+         />
+
+
+    </RadioGroup>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Answer"
+        android:id="@+id/answer"
+        />
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="NEXT"
-        android:id="@+id/next"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="49dp" />
+        android:text="SUBMIT"
+        android:id="@+id/submit"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:onClick="submit"
+         />
 
-</RelativeLayout>
+</LinearLayout>

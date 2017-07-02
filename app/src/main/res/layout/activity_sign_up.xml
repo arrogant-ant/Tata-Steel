@@ -12,17 +12,6 @@
     android:orientation="vertical"
     android:background="@drawable/nb"
     >
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NAME:"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp"
-        android:id="@+id/name" />
-
     <EditText
         android:layout_width="110dp"
         android:layout_height="wrap_content"
@@ -30,9 +19,18 @@
         android:ems="10"
         android:id="@+id/first_name"
         android:hint="first"
-        android:layout_below="@+id/name"
+        android:layout_above="@+id/contact_no"
         android:layout_alignParentStart="true"
         android:textAlignment="center" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="NAME:"
+        android:layout_above="@id/first_name"
+        android:id="@+id/name" />
+
 
     <EditText
         android:layout_width="120dp"
@@ -52,7 +50,7 @@
         android:hint="last"
         android:ems="10"
         android:id="@+id/last_name"
-        android:layout_below="@+id/name"
+        android:layout_alignTop="@+id/mid_name"
         android:layout_toEndOf="@+id/mid_name"
         android:textAlignment="center" />
 
@@ -61,8 +59,8 @@
         android:layout_height="wrap_content"
         android:text="CONTACT N0. :"
         android:id="@+id/contact"
-        android:layout_alignBottom="@+id/contact_no"
-        android:layout_alignStart="@+id/email" />
+        android:layout_above="@+id/email_id"
+        android:layout_alignParentStart="true" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -71,8 +69,8 @@
         android:ems="10"
         android:id="@+id/contact_no"
         android:hint="10 digit mobile number"
-        android:layout_below="@+id/first_name"
-        android:layout_toEndOf="@+id/first_name"
+        android:layout_above="@+id/email_id"
+        android:layout_alignStart="@+id/email_id"
         android:textAlignment="center" />
 
     <TextView
@@ -80,9 +78,8 @@
         android:layout_height="wrap_content"
         android:text="PERSONAL NO. :"
         android:id="@+id/personal_no"
-        android:layout_marginTop="41dp"
-        android:layout_below="@+id/email"
-        android:layout_alignEnd="@+id/first_name" />
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -90,18 +87,17 @@
         android:text="EMAIL ID :"
         android:id="@+id/email"
         android:gravity="left"
-        android:layout_marginTop="33dp"
-        android:layout_below="@+id/contact_no"
-        android:layout_alignStart="@+id/personal_no" />
+        android:layout_above="@+id/personal"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="NEXT"
         android:id="@+id/next"
-        android:layout_marginTop="44dp"
-        android:layout_below="@+id/editText"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="nextSignUp"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -125,9 +121,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="ADDRESS:"
-        android:textStyle="bold"
-        android:id="@+id/address"
-        android:layout_alignBottom="@+id/editText"
+        android:layout_alignBottom="@+id/address"
         android:layout_alignStart="@+id/personal_no" />
 
     <EditText
@@ -135,7 +129,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPostalAddress"
         android:ems="10"
-        android:id="@+id/editText"
+        android:id="@+id/address"
         android:layout_below="@+id/personal_no"
         android:layout_toEndOf="@+id/personal_no" />
 
