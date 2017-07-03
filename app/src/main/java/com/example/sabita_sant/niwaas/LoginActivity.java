@@ -327,7 +327,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 
+
     }
+    public void openSignUp2(View view) {
+        Intent intent=new Intent(LoginActivity.this,SignUp2.class);
+        startActivity(intent);}
 
     public void openSignUp(View view) {
         Intent intent=new Intent(LoginActivity.this,SignUp.class);

@@ -1,5 +1,6 @@
 package com.example.sabita_sant.niwaas;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -99,4 +100,6 @@ public class SignUp2 extends AppCompatActivity {
         };
         VolleySingleton.getInstance(SignUp2.this).addRequest(reg_request);
     }
+
+
 }
