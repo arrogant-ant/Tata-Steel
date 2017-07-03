@@ -102,4 +102,8 @@ public class SignUp2 extends AppCompatActivity {
     }
 
 
+    public void openplaceSelect(View view) {
+        Intent intent=new Intent(SignUp2.this,placeSelect.class);
+        startActivity(intent);
+    }
 }

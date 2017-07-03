@@ -8,7 +8,7 @@
     android:orientation="vertical"
     tools:context="com.example.sabita_sant.niwaas.SignUp2"
     android:background="@drawable/nb"
-    >
+    android:onClick="openplaceSelect">
 
     <TextView
         android:layout_width="wrap_content"
@@ -99,10 +99,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SUBMIT"
-        android:id="@+id/submit"
+                android:id="@+id/submit"
         android:layout_gravity="center"
         android:layout_marginTop="30dp"
-        android:onClick="submit"
+        android:onClick="submit|openplaceSelect"
          />
 
 </LinearLayout>
