@@ -37,7 +37,7 @@
                 android:layout_height="wrap_content">
 
                 <AutoCompleteTextView android:id="@+id/email" android:layout_width="match_parent"
-                    android:layout_height="wrap_content" android:hint="@string/prompt_email"
+                    android:layout_height="wrap_content" android:hint="@string/prompt_P_ID"
                     android:inputType="textEmailAddress" android:maxLines="1"
                     android:singleLine="true" />
 
@@ -63,6 +63,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Forgot password?"
+                android:onClick="forgotPassword"
                 android:textStyle="italic|bold"
                 android:layout_margin="12dp"
                 android:textSize="16dp"

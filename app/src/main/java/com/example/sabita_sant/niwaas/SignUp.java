@@ -14,7 +14,7 @@ public class SignUp extends AppCompatActivity {
     String email;
     String p_no;
     String address;
-    EditText first_name, mid_name,last_name,ph_et,p_no_et,address_et;
+    EditText first_name, mid_name,last_name,ph_et,p_no_et,address_et,email_et;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,25 +25,55 @@ public class SignUp extends AppCompatActivity {
         ph_et= (EditText) findViewById(R.id.contact_no);
         p_no_et= (EditText) findViewById(R.id.personal);
         address_et= (EditText) findViewById(R.id.address);
+        email_et= (EditText) findViewById(R.id.email_id);
 
 
     }
 
     public void nextSignUp(View view) {
-        name=name.concat(first_name.getText().toString()).concat(" ")
-                .concat(mid_name.getText().toString()).concat(" ")
-                .concat(last_name.getText().toString());
+        if(checkValue()) {
+            name = name.concat(first_name.getText().toString()).concat(" ")
+                    .concat(mid_name.getText().toString()).concat(" ")
+                    .concat(last_name.getText().toString());
 
-        ph=ph_et.getText().toString();
-        p_no= p_no_et.getText().toString();
-        address=address_et.getText().toString();
-        Intent intent=new Intent(SignUp.this,SignUp2.class);
-        Bundle user_details= new Bundle();
-        user_details.putString("name",name);
-        user_details.putString("ph",ph);
-        user_details.putString("p_no",p_no);
-        user_details.putString("address",address);
-        intent.putExtra("details",user_details);
-        startActivity(intent);
+            ph = ph_et.getText().toString();
+            p_no = p_no_et.getText().toString();
+            address = address_et.getText().toString();
+            Intent intent = new Intent(SignUp.this, SignUp2.class);
+            Bundle user_details = new Bundle();
+            user_details.putString("name", name);
+            user_details.putString("ph", ph);
+            user_details.putString("p_no", p_no);
+            user_details.putString("address", address);
+            intent.putExtra("details", user_details);
+            startActivity(intent);
+        }
+    }
+
+    private boolean checkValue() {
+        if(ph_et.getText().toString().length()!=10)
+        {
+            Toast.makeText(SignUp.this,"Enter valid ph no",Toast.LENGTH_SHORT).show();
+
+            return false;
+        }
+
+        else if(!(email_et.getText().toString().contains("@") ))
+        {
+            Toast.makeText(SignUp.this,"Enter valid email address ",Toast.LENGTH_SHORT).show();
+            return false;
+        }
+
+        else if (p_no_et.getText().toString().isEmpty()
+                    || first_name.getText().toString().isEmpty()
+                    || address_et.getText().toString().isEmpty() )
+            {
+                Toast.makeText(SignUp.this,"ALl feild compulsory",Toast.LENGTH_SHORT).show();
+
+                return false;
+            }
+
+        else
+            return true;
     }
 }

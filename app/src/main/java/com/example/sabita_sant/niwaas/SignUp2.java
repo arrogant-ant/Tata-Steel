@@ -16,7 +16,8 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
-public class SignUp2 extends AppCompatActivity {
+public class
+        SignUp2 extends AppCompatActivity {
 
     EditText password_et, confirm_et, answer_et;
     String password, security, answer;
@@ -37,8 +38,11 @@ public class SignUp2 extends AppCompatActivity {
     }
 
     public void submit(View view) {
-        if (password_et.getText().toString().equals(confirm_et.getText().toString())) {
-            password = password_et.getText().toString();
+        password = password_et.getText().toString();
+        answer = answer_et.getText().toString();
+        if (password.isEmpty() || answer.isEmpty()) {
+            Toast.makeText(SignUp2.this, "All feilds compulsory", Toast.LENGTH_SHORT).show();
+        } else if (password.equals(confirm_et.getText().toString())) {
             switch (question.getCheckedRadioButtonId()) {
                 case R.id.q1:
                     security = "1";
@@ -56,14 +60,16 @@ public class SignUp2 extends AppCompatActivity {
                     security = "4";
                     break;
             }
-            answer = answer_et.getText().toString();
+
             register();
 
 
         } else {
             Toast.makeText(SignUp2.this, "Invalid password", Toast.LENGTH_SHORT).show();
             onStart();
-        }
+            }
+
+        
     }
 
     private void register() {

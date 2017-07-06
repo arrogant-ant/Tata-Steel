@@ -214,7 +214,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
                         if(jsonObject.get("code").equals("Login success"))
                         {
                             //intent to successful login activity
-
+                            startActivity(new Intent(LoginActivity.this,SelectPriority1.class));
                             Toast.makeText(LoginActivity.this,"Welcome "+jsonObject.get("post"),Toast.LENGTH_SHORT).show();
                         }
                         else
@@ -327,7 +327,11 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
     @Override
     public void onLoaderReset(Loader<Cursor> cursorLoader) {
 
+
     }
+    public void forgotPassword(View view) {
+        Intent intent=new Intent(LoginActivity.this,Forgot.class);
+        startActivity(intent);}
 
     public void openSignUp(View view) {
         Intent intent=new Intent(LoginActivity.this,SignUp.class);
